@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UICTimePicker" customModule="UICHourPicker" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="i5M-Pr-FkT" id="h42-8i-BdJ"/>
+                <outlet property="hourPicker" destination="H2P-mp-ygS" id="65u-7T-yT3"/>
+                <outlet property="minutePicker" destination="8L5-yt-hh4" id="xza-5b-I2G"/>
+                <outlet property="selectedRowSeperatorView" destination="AZL-RY-yKC" id="cxf-ZP-J0M"/>
+                <outlet property="selectedRowView" destination="KAq-O3-VLu" id="odG-zQ-2aF"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="225" height="194"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KAq-O3-VLu">
+                    <rect key="frame" x="0.0" y="65" width="225" height="64"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AZL-RY-yKC">
+                            <rect key="frame" x="107.5" y="22" width="10" height="20"/>
+                            <color key="backgroundColor" red="0.30196078431372547" green="0.55686274509803924" blue="0.83137254901960778" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="10" id="7ou-di-Qep"/>
+                                <constraint firstAttribute="height" constant="20" id="K8f-e6-az7"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="225" id="4HB-9f-p14"/>
+                        <constraint firstItem="AZL-RY-yKC" firstAttribute="centerY" secondItem="KAq-O3-VLu" secondAttribute="centerY" id="M7S-GU-3Hc"/>
+                        <constraint firstItem="AZL-RY-yKC" firstAttribute="centerX" secondItem="KAq-O3-VLu" secondAttribute="centerX" id="gmY-8L-JFa"/>
+                        <constraint firstAttribute="height" constant="64" id="ph8-e1-GGI"/>
+                    </constraints>
+                </view>
+                <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H2P-mp-ygS" userLabel="Hour Picker View">
+                    <rect key="frame" x="16" y="0.0" width="78" height="194"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="78" id="Tgg-Rc-q8F"/>
+                    </constraints>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="bdj-ql-u0Y"/>
+                        <outlet property="delegate" destination="-1" id="9kX-xq-htr"/>
+                    </connections>
+                </pickerView>
+                <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8L5-yt-hh4" userLabel="Minute Picker View">
+                    <rect key="frame" x="131" y="0.0" width="78" height="194"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="78" id="3Cx-7D-E35"/>
+                    </constraints>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="CvF-eF-l9f"/>
+                        <outlet property="delegate" destination="-1" id="BHH-YI-Phx"/>
+                    </connections>
+                </pickerView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="8L5-yt-hh4" secondAttribute="trailing" constant="16" id="ALr-jm-VGj"/>
+                <constraint firstItem="H2P-mp-ygS" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="Bbh-3X-dwf"/>
+                <constraint firstItem="8L5-yt-hh4" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="F73-E6-Dr0"/>
+                <constraint firstItem="KAq-O3-VLu" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="KSj-O2-HzL"/>
+                <constraint firstItem="KAq-O3-VLu" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="MRm-on-ix4"/>
+                <constraint firstItem="H2P-mp-ygS" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="MXb-ls-Jyf"/>
+                <constraint firstItem="8L5-yt-hh4" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="SZP-0l-6vq"/>
+                <constraint firstItem="8L5-yt-hh4" firstAttribute="leading" secondItem="H2P-mp-ygS" secondAttribute="trailing" constant="37" id="gwK-Sr-UCE"/>
+                <constraint firstItem="H2P-mp-ygS" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="umg-Al-lTz"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="42.399999999999999" y="98.950524737631198"/>
+        </view>
+    </objects>
+</document>
